@@ -136,7 +136,8 @@ LooongInt::Data LooongInt::subtract(const Data& larger,
 	auto lIt = larger.crbegin();
 	uint8_t loss(0);
 	for (auto sIt = smaller.crbegin();
-			sIt != smaller.crend(); lIt++, sIt++) {
+			sIt != smaller.crend() &&
+			lIt != larger.crend(); lIt++, sIt++) {
 		const uint8_t buffer((base + *lIt) - (*sIt + loss));
 		result.push_front(buffer%base);
 		loss = buffer < base;
