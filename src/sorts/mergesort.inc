@@ -1,6 +1,6 @@
 template <typename T>
 T* mergeSort(T* const data, const size_t size) noexcept {
-	if (size == 1) {
+	if (size <= 1) {
 		return new T(*data);
 	}
 
