@@ -1,41 +1,18 @@
-#include "looongint.hpp"
+#include "sorts/mergesort.inc"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-	std::string input("");
-	while (true) {
-		cout << "first num: ";
-		cin >> input;
-		if (input == "e") {
-			return 0;
-		}
-		const LooongInt fnum(input);
-		cout << "second num: ";
-		cin >> input;
-		if (input == "e") {
-			return 0;
-		}
-		const LooongInt snum(input);
-		cout << "action: ";
-		cin >> input;
-		if (input == "e") {
-			return 0;
-		}
-		cout << "result: ";
-		if (input == "+") {
-			cout << fnum.get() << " + " << snum.get() <<
-					" = " << (fnum + snum).get() << endl;
-		}
-		if (input == "-") {
-			cout << fnum.get() << " - " << snum.get() <<
-					" = " << (fnum - snum).get() << endl;
-		}
-		if (input == "x" || input == "*") {
-			cout << fnum.get() << " x " << snum.get() <<
-				" = " << (fnum * snum).get() << endl;
-		}
+	int ok[] = { 2, 3, 5, -1, 3, 4, 5, 8, 7, 1 };
+	for (int i : ok) {
+		cout << i << " ";
 	}
+	cout << endl;
+	int* kk = mergeSort<int>(ok, _countof(ok));
+	for (int i = 0; i < _countof(ok); i++) {
+		cout << kk[i] << " ";
+	}
+	cout << endl;
 	return 0;
 }
