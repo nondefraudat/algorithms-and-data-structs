@@ -10,6 +10,7 @@ struct LooongIntNode;
 class LooongInt {
 public:
 	LooongInt() noexcept;
+	LooongInt(const int64_t number) noexcept;
 	LooongInt(const char* const number) noexcept;
 	LooongInt(const std::string& number) noexcept;
 

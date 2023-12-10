@@ -6,6 +6,16 @@ LooongInt::LooongInt() noexcept {
 	data.push_back(0);
 }
 
+LooongInt::LooongInt(const int64_t number) noexcept {
+	if (number < 0) {
+		isNegative = true;
+	}
+	int64_t prey = number;
+	for (prey; prey; prey/=base) {
+		data.push_front(prey%base);
+	}
+}
+
 LooongInt::LooongInt(const char* const number) noexcept {
 	const char* it = number;
 	if (*it == '-') {
