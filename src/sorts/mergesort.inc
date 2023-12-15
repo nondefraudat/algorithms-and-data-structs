@@ -1,3 +1,8 @@
+// Time 
+//	worst	O(n log n)
+//	average	O(n log n)
+//	best	O(n log n)
+// Memm	&& O(n)
 template <typename T>
 T* mergeSort(T* const data, const size_t size) noexcept {
 	if (!size) {

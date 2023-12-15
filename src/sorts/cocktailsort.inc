@@ -1,5 +1,10 @@
 #include "../misc/xorswap.inc"
 
+// Time 
+//	worst	O(n^2)
+//	average	O(n^2)
+//	best	O(n)
+// Memm	O(1)
 template<typename T>
 void cocktailSort(T* const inOut, const size_t size) noexcept {
 	size_t leftIndex = 0;

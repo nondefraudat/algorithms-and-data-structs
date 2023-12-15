@@ -1,7 +1,10 @@
 #include "../misc/xorswap.inc"
 
-// Time O(n) O(n^2) O(n^2)
-// Memm O(1)
+// Time 
+//	worst	O(n^2)
+//	average	O(n^2)
+//	best	O(n)
+// Memm	O(1)
 template<typename T>
 void bubbleSort(T* const inOut, const size_t size) noexcept {
 	for (int i = 1; i < size; i++) {
