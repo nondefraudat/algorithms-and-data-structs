@@ -1,5 +1,7 @@
 #include "clone.inc"
 
+
+
 template<typename T>
 size_t sortAndGetInversionsCount(T*& dataInOut, const size_t size) noexcept {
 	if (size <= 1) {
@@ -29,7 +31,7 @@ size_t sortAndGetInversionsCount(T*& dataInOut, const size_t size) noexcept {
 		else {
 			if (leftIndex < leftSize &&
 					rightData[rightIndex] < leftData[leftIndex]) {
-				inversinsCount++;
+				inversinsCount += size/2  - leftSize + 1;
 			}
 			dataInOut[i] = rightData[rightIndex++];
 		}
